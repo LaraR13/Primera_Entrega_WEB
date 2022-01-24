@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Registrar Cuenta Estudiante</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Vistas/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap.rtl.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-grid.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-grid.rtl.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-reboot.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-reboot.rtl.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-utilities.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-utilities.rtl.css"/>
+    <link rel="stylesheet" href="/Vistas/styles.css"/>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+
+<body class="bg-dark">
+
+<div class="container bg-dark">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-light">
+                    <div class="p-5">
+                        <div class="text-lg-right">
+                            <h1 class="h4 text-gray-900 mb-8">Bienvenido</h1>
+                        </div>
+                        <div class="text-lg-left">
+                            <h1 class="h4 text-gray-900 mb-8">Muestra de la Institucion</h1>
+                        </div>
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Sistema De Votacion</h1>
+                        </div>
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Regístrese en su cuenta</h1>
+                        </div>
+                        <div class="form-group mb-4">
+                            <a class="btn btn-primary btn-user btn-block" href="login_Estudiante.html">Iniciar
+                                Sesion!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 bg-danger">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Crear Cuenta Estudiante</h1>
+
+                        </div>
+                        <form class="user">
+                            <div class="form-group">
+                                <div class="container">
+                                    <div class="form-group col-xs-12 col-sm-6 col-md-4">
+                                        <label for="banner">Subir Foto:</label>
+                                        <div class="input-group">
+                                            <label class="input-group-btn">
+			<span class="btn btn-primary btn-file">
+                Banner <input accept=".jpg,.png,.jpeg,.gif" class="hidden" name="banner" type="file" id="banner">
+            </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <script>$(document).on('change', '.btn-file :file', function () {
+                                        var input = $(this);
+                                        var numFiles = input.get(0).files ? input.get(0).files.length : 1;
+                                        var label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+                                        input.trigger('fileselect', [numFiles, label]);
+                                    });
+                                    $(document).ready(function () {
+                                        $('.btn-file :file').on('fileselect', function (event, numFiles, label) {
+                                            var input = $(this).parents('.input-group').find(':text');
+                                            var log = numFiles > 1 ? numFiles + ' files selected' : label;
+                                            if (input.length) {
+                                                input.val(log);
+                                            } else {
+                                                if (log) alert(log);
+                                            }
+                                        });
+                                    });</script>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                               placeholder="Nombres">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                               placeholder="Apellidos">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                           placeholder="Email..">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" class="form-control form-control-user"
+                                               id="exampleInputPassword" placeholder="Contraseña">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control form-control-user"
+                                               id="exampleRepeatPassword" placeholder="Repetir Contraseña">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="number" class="form-control form-control-user"
+                                               id="exampleInputPassword" placeholder="Numero Documento">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="state" class="form-label">Sexo</label>
+                                        <select class="form-select" id="state" required>
+                                            <option value="">Sexo</option>
+                                            <option>Hombre</option>
+                                            <option>Mujer</option>
+                                            <option>Indefenido</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <label for="state" class="form-label">Institucion</label>
+                                        <select class="form-select" id="state" required>
+                                            <option value="">.......</option>
+                                            <option>cedula de ciudadania</option>
+                                            <option>Tarjeta Indentidad</option>
+                                            <option>Cedula Extranjera</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="state" class="form-label">Sede</label>
+                                        <select class="form-select" id="state" required>
+                                            <option value="">.......</option>
+                                            <option>cedula de ciudadania</option>
+                                            <option>Tarjeta Indentidad</option>
+                                            <option>Cedula Extranjera</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-4">
+                                        <label for="state" class="form-label">Grado Actual</label>
+                                        <select class="form-select" id="state" required>
+                                            <option value="">.......</option>
+                                            <option>cedula de ciudadania</option>
+                                            <option>Tarjeta Indentidad</option>
+                                            <option>Cedula Extranjera</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form id="login" onsubmit="process(event)">
+                                            <label for="state" class="form-label">Telefono</label>
+                                            <input id="phone" type="tel" name="phone"/>
+                                            <!--                              <input type="submit" class="btn" value="Verify"/>-->
+                                        </form>
+                                        <div class="alert alert-info" style="display: none"></div>
+                                        <div class="alert alert-error" style="display: none"></div>
+                                        <script>
+                                            const phoneInputField = document.querySelector("#phone");
+                                            const phoneInput = window.intlTelInput(phoneInputField, {
+                                                utilsScript:
+                                                    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                                            });
+
+                                            const info = document.querySelector(".alert-info");
+                                            const error = document.querySelector(".alert-error");
+
+                                            function process(event) {
+                                                event.preventDefault();
+
+                                                const phoneNumber = phoneInput.getNumber();
+
+                                                info.style.display = "none";
+                                                error.style.display = "none";
+
+                                                const data = new URLSearchParams();
+                                                data.append("phone", phoneNumber);
+
+                                                fetch("http://<your-url-here>.twil.io/lookup", {
+                                                    method: "POST",
+                                                    body: data,
+                                                })
+                                                    .then((response) => response.json())
+                                                    .then((json) => {
+                                                        if (json.success) {
+                                                            info.style.display = "";
+                                                            info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+                                                        } else {
+                                                            console.log(json.error);
+                                                            error.style.display = "";
+                                                            error.innerHTML = `Invalid phone number.`;
+                                                        }
+                                                    })
+                                                    .catch((err) => {
+                                                        error.style.display = "";
+                                                        error.innerHTML = `Something went wrong: ${err}`;
+                                                    });
+                                            }
+                                        </script>
+
+                                    </div>
+                                </div>
+
+                                <a href="login_Registrador.html" class="btn btn-primary btn-user btn-block">
+                                    Registrarse
+                                </a>
+                                <hr>
+                                <!--     <a href="index.html" class="btn btn-google btn-user btn-block">
+                                         <i class="fab fa-google fa-fw"></i> Register with Google
+                                     </a>
+                                     <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                         <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                                     </a>-->
+                        </form>
+                        <hr>
+                        <!--   <div class="text-center">
+                               <a class="small" href="forgot-password.html">Forgot Password?</a>
+                           </div>
+                           <div class="text-center">
+                               <a class="small" href="login_Registrador.html">Already have an account? Login!</a>
+                           </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

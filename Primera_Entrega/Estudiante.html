@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Estudiante</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Vistas/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap.rtl.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-grid.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-grid.rtl.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-reboot.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-reboot.rtl.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-utilities.css"/>
+    <link rel="stylesheet" href="/Vistas/css/bootstrap-utilities.rtl.css"/>
+
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <div class="dropdown">
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle-split" href="#" id="userDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                    <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Profile
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Settings
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Activity Log
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Logout
+                    </a>
+                </div>
+        </div>
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-home" data-feather="home"></i>
+                <span>Tablero De Mandos</span></a>
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+        <!-- Nav Item - Candidato -->
+        <li class="nav-item">
+            <a class="nav-link" href="Estudiante.html">
+                <i class="fas fa-fw fa-user-edit"></i>
+                <span>Modificar Datos</span></a>
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Nav Item - Convocatoria -->
+        <li class="nav-item">
+            <a class="nav-link" href="Votar_estudiante.html">
+                <i class="fas fa-fw fa-calendar-check"></i>
+                <span>Votaciones</span></a>
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Topbar Search -->
+                <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                               aria-label="Search" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                             aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light border-0 small"
+                                           placeholder="Search for..." aria-label="Search"
+                                           aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell fa-fw"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <!-- Dropdown - Alerts -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="alertsDropdown">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 12, 2019</div>
+                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-success">
+                                        <i class="fas fa-donate text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 7, 2019</div>
+                                    $290.29 has been deposited into your account!
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-exclamation-triangle text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 2, 2019</div>
+                                    Spending Alert: We've noticed unusually high spending for your account.
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                        </div>
+                    </li>
+
+                    <!-- Nav Item - Messages -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-envelope fa-fw"></i>
+                            <!-- Counter - Messages -->
+                            <span class="badge badge-danger badge-counter">7</span>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="messagesDropdown">
+                            <h6 class="dropdown-header">
+                                Message Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                         alt="...">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been having.
+                                    </div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                         alt="...">
+                                    <div class="status-indicator"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">I have the photos that you ordered last month, how
+                                        would you like them sent to you?
+                                    </div>
+                                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                         alt="...">
+                                    <div class="status-indicator bg-warning"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Last month's report looks great, I am very happy with
+                                        the progress so far, keep up the good work!
+                                    </div>
+                                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                         alt="...">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                        told me that people say this to all dogs, even if they aren't good...
+                                    </div>
+                                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                        </div>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <h4 class="mb-3">Estudiante</h4>
+                <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Nombre Convocatoria"
+                                   value=""
+                                   required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">Tipo de Docuemento</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Documento"
+                                   value=""
+                                   required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Paises</label>
+                            <select name="pais">
+                                <option value="AF">Afganistán</option>
+                                <option value="AL">Albania</option>
+                                <option value="DE">Alemania</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AI">Anguilla</option>
+                                <option value="AQ">Antártida</option>
+                                <option value="AG">Antigua y Barbuda</option>
+                                <option value="AN">Antillas Holandesas</option>
+                                <option value="SA">Arabia Saudí</option>
+                                <option value="DZ">Argelia</option>
+                                <option value="AR">Argentina</option>
+                                <option value="AM">Armenia</option>
+                                <option value="AW">Aruba</option>
+                                <option value="AU">Australia</option>
+                                <option value="AT">Austria</option>
+                                <option value="AZ">Azerbaiyán</option>
+                                <option value="BS">Bahamas</option>
+                                <option value="BH">Bahrein</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="BB">Barbados</option>
+                                <option value="BE">Bélgica</option>
+                                <option value="BZ">Belice</option>
+                                <option value="BJ">Benin</option>
+                                <option value="BM">Bermudas</option>
+                                <option value="BY">Bielorrusia</option>
+                                <option value="MM">Birmania</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BA">Bosnia y Herzegovina</option>
+                                <option value="BW">Botswana</option>
+                                <option value="BR">Brasil</option>
+                                <option value="BN">Brunei</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="BF">Burkina Faso</option>
+                                <option value="BI">Burundi</option>
+                                <option value="BT">Bután</option>
+                                <option value="CV">Cabo Verde</option>
+                                <option value="KH">Camboya</option>
+                                <option value="CM">Camerún</option>
+                                <option value="CA">Canadá</option>
+                                <option value="TD">Chad</option>
+                                <option value="CL">Chile</option>
+                                <option value="CN">China</option>
+                                <option value="CY">Chipre</option>
+                                <option value="VA">Ciudad del Vaticano (Santa Sede)</option>
+                                <option value="CO">Colombia</option>
+                                <option value="KM">Comores</option>
+                                <option value="CG">Congo</option>
+                                <option value="CD">Congo, República Democrática del</option>
+                                <option value="KR">Corea</option>
+                                <option value="KP">Corea del Norte</option>
+                                <option value="CI">Costa de Marfíl</option>
+                                <option value="CR">Costa Rica</option>
+                                <option value="HR">Croacia (Hrvatska)</option>
+                                <option value="CU">Cuba</option>
+                                <option value="DK">Dinamarca</option>
+                                <option value="DJ">Djibouti</option>
+                                <option value="DM">Dominica</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="EG">Egipto</option>
+                                <option value="SV">El Salvador</option>
+                                <option value="AE">Emiratos Árabes Unidos</option>
+                                <option value="ER">Eritrea</option>
+                                <option value="SI">Eslovenia</option>
+                                <option value="ES" selected>España</option>
+                                <option value="US">Estados Unidos</option>
+                                <option value="EE">Estonia</option>
+                                <option value="ET">Etiopía</option>
+                                <option value="FJ">Fiji</option>
+                                <option value="PH">Filipinas</option>
+                                <option value="FI">Finlandia</option>
+                                <option value="FR">Francia</option>
+                                <option value="GA">Gabón</option>
+                                <option value="GM">Gambia</option>
+                                <option value="GE">Georgia</option>
+                                <option value="GH">Ghana</option>
+                                <option value="GI">Gibraltar</option>
+                                <option value="GD">Granada</option>
+                                <option value="GR">Grecia</option>
+                                <option value="GL">Groenlandia</option>
+                                <option value="GP">Guadalupe</option>
+                                <option value="GU">Guam</option>
+                                <option value="GT">Guatemala</option>
+                                <option value="GY">Guayana</option>
+                                <option value="GF">Guayana Francesa</option>
+                                <option value="GN">Guinea</option>
+                                <option value="GQ">Guinea Ecuatorial</option>
+                                <option value="GW">Guinea-Bissau</option>
+                                <option value="HT">Haití</option>
+                                <option value="HN">Honduras</option>
+                                <option value="HU">Hungría</option>
+                                <option value="IN">India</option>
+                                <option value="ID">Indonesia</option>
+                                <option value="IQ">Irak</option>
+                                <option value="IR">Irán</option>
+                                <option value="IE">Irlanda</option>
+                                <option value="BV">Isla Bouvet</option>
+                                <option value="CX">Isla de Christmas</option>
+                                <option value="IS">Islandia</option>
+                                <option value="KY">Islas Caimán</option>
+                                <option value="CK">Islas Cook</option>
+                                <option value="CC">Islas de Cocos o Keeling</option>
+                                <option value="FO">Islas Faroe</option>
+                                <option value="HM">Islas Heard y McDonald</option>
+                                <option value="FK">Islas Malvinas</option>
+                                <option value="MP">Islas Marianas del Norte</option>
+                                <option value="MH">Islas Marshall</option>
+                                <option value="UM">Islas menores de Estados Unidos</option>
+                                <option value="PW">Islas Palau</option>
+                                <option value="SB">Islas Salomón</option>
+                                <option value="SJ">Islas Svalbard y Jan Mayen</option>
+                                <option value="TK">Islas Tokelau</option>
+                                <option value="TC">Islas Turks y Caicos</option>
+                                <option value="VI">Islas Vírgenes (EEUU)</option>
+                                <option value="VG">Islas Vírgenes (Reino Unido)</option>
+                                <option value="WF">Islas Wallis y Futuna</option>
+                                <option value="IL">Israel</option>
+                                <option value="IT">Italia</option>
+                                <option value="JM">Jamaica</option>
+                                <option value="JP">Japón</option>
+                                <option value="JO">Jordania</option>
+                                <option value="KZ">Kazajistán</option>
+                                <option value="KE">Kenia</option>
+                                <option value="KG">Kirguizistán</option>
+                                <option value="KI">Kiribati</option>
+                                <option value="KW">Kuwait</option>
+                                <option value="LA">Laos</option>
+                                <option value="LS">Lesotho</option>
+                                <option value="LV">Letonia</option>
+                                <option value="LB">Líbano</option>
+                                <option value="LR">Liberia</option>
+                                <option value="LY">Libia</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LT">Lituania</option>
+                                <option value="LU">Luxemburgo</option>
+                                <option value="MK">Macedonia, Ex-República Yugoslava de</option>
+                                <option value="MG">Madagascar</option>
+                                <option value="MY">Malasia</option>
+                                <option value="MW">Malawi</option>
+                                <option value="MV">Maldivas</option>
+                                <option value="ML">Malí</option>
+                                <option value="MT">Malta</option>
+                                <option value="MA">Marruecos</option>
+                                <option value="MQ">Martinica</option>
+                                <option value="MU">Mauricio</option>
+                                <option value="MR">Mauritania</option>
+                                <option value="YT">Mayotte</option>
+                                <option value="MX">México</option>
+                                <option value="FM">Micronesia</option>
+                                <option value="MD">Moldavia</option>
+                                <option value="MC">Mónaco</option>
+                                <option value="MN">Mongolia</option>
+                                <option value="MS">Montserrat</option>
+                                <option value="MZ">Mozambique</option>
+                                <option value="NA">Namibia</option>
+                                <option value="NR">Nauru</option>
+                                <option value="NP">Nepal</option>
+                                <option value="NI">Nicaragua</option>
+                                <option value="NE">Níger</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="NU">Niue</option>
+                                <option value="NF">Norfolk</option>
+                                <option value="NO">Noruega</option>
+                                <option value="NC">Nueva Caledonia</option>
+                                <option value="NZ">Nueva Zelanda</option>
+                                <option value="OM">Omán</option>
+                                <option value="NL">Países Bajos</option>
+                                <option value="PA">Panamá</option>
+                                <option value="PG">Papúa Nueva Guinea</option>
+                                <option value="PK">Paquistán</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Perú</option>
+                                <option value="PN">Pitcairn</option>
+                                <option value="PF">Polinesia Francesa</option>
+                                <option value="PL">Polonia</option>
+                                <option value="PT">Portugal</option>
+                                <option value="PR">Puerto Rico</option>
+                                <option value="QA">Qatar</option>
+                                <option value="UK">Reino Unido</option>
+                                <option value="CF">República Centroafricana</option>
+                                <option value="CZ">República Checa</option>
+                                <option value="ZA">República de Sudáfrica</option>
+                                <option value="DO">República Dominicana</option>
+                                <option value="SK">República Eslovaca</option>
+                                <option value="RE">Reunión</option>
+                                <option value="RW">Ruanda</option>
+                                <option value="RO">Rumania</option>
+                                <option value="RU">Rusia</option>
+                                <option value="EH">Sahara Occidental</option>
+                                <option value="KN">Saint Kitts y Nevis</option>
+                                <option value="WS">Samoa</option>
+                                <option value="AS">Samoa Americana</option>
+                                <option value="SM">San Marino</option>
+                                <option value="VC">San Vicente y Granadinas</option>
+                                <option value="SH">Santa Helena</option>
+                                <option value="LC">Santa Lucía</option>
+                                <option value="ST">Santo Tomé y Príncipe</option>
+                                <option value="SN">Senegal</option>
+                                <option value="SC">Seychelles</option>
+                                <option value="SL">Sierra Leona</option>
+                                <option value="SG">Singapur</option>
+                                <option value="SY">Siria</option>
+                                <option value="SO">Somalia</option>
+                                <option value="LK">Sri Lanka</option>
+                                <option value="PM">St Pierre y Miquelon</option>
+                                <option value="SZ">Suazilandia</option>
+                                <option value="SD">Sudán</option>
+                                <option value="SE">Suecia</option>
+                                <option value="CH">Suiza</option>
+                                <option value="SR">Surinam</option>
+                                <option value="TH">Tailandia</option>
+                                <option value="TW">Taiwán</option>
+                                <option value="TZ">Tanzania</option>
+                                <option value="TJ">Tayikistán</option>
+                                <option value="TF">Territorios franceses del Sur</option>
+                                <option value="TP">Timor Oriental</option>
+                                <option value="TG">Togo</option>
+                                <option value="TO">Tonga</option>
+                                <option value="TT">Trinidad y Tobago</option>
+                                <option value="TN">Túnez</option>
+                                <option value="TM">Turkmenistán</option>
+                                <option value="TR">Turquía</option>
+                                <option value="TV">Tuvalu</option>
+                                <option value="UA">Ucrania</option>
+                                <option value="UG">Uganda</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="UZ">Uzbekistán</option>
+                                <option value="VU">Vanuatu</option>
+                                <option value="VE">Venezuela</option>
+                                <option value="VN">Vietnam</option>
+                                <option value="YE">Yemen</option>
+                                <option value="YU">Yugoslavia</option>
+                                <option value="ZM">Zambia</option>
+                                <option value="ZW">Zimbabue</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">Numero de Documento </label>
+                            <input type="number" class="form-control" id="firstName" placeholder="Numero de Docuemento"
+                                   value=""
+                                   required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="username" class="form-label">Fecha de Nacimiento</label>
+                            <div class="input-group has-validation">
+                                <input type="datetime-local" class="form-control" id="username"
+                                       placeholder="DD/MM/YYYYY"
+                                       required>
+                                <div class="invalid-feedback">
+                                    Your username is required.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label for="state" class="form-label">Lugar de nacimiento</label>
+                            <select class="form-select" id="state" required>
+                                <option value="">.......</option>
+                                <option>California</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="zip" class="form-label">Fotografia </label>
+                            <input type="post" class="form-control" id="zip" placeholder="subir imagen " required>
+                            <div class="invalid-feedback">
+                                Zip code required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+                    <h4 class="mb-3">Cambio contraseña</h4>
+                    <div class="my-3">
+
+
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">Nueva Contraseña</label>
+                            <input type="password" class="form-control" id="firstName" placeholder="passsword"
+                                   value=""
+                                   required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="firstName" placeholder="Passsword"
+                                   value=""
+                                   required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+
+                        <!-- Page Heading -->
+                        <br>
+                        <h1 class="h3 mb-2 text-gray-800">Datos</h1>
+                        <p class="mb-4">Datos Registrados</a>.</p>
+
+                        <!-- DataTales Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Registro</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                        <tr>
+                                            <th>Nombres</th>
+                                            <th>Apellidos</th>
+                                            <th>Numero Documento</th>
+                                            <th>Telefeno</th>
+                                            <th>Email</th>
+                                            <th>Institucion</th>
+                                        </tr>
+                                        </thead>
+                                        <tfoot>
+                                        <tr>
+                                            <th>Nombres</th>
+                                            <th>Apellidos</th>
+                                            <th>Numero Documento</th>
+                                            <th>Telefeno</th>
+                                            <th>Email</th>
+                                            <th>Institucion</th>
+                                        </tr>
+                                        </tfoot>
+                                        <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                            <td>$170,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>San Francisco</td>
+                                            <td>66</td>
+                                            <td>2009/01/12</td>
+                                            <td>$86,000</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Jenette Caldwell</td>
+                                            <td>Development Lead</td>
+                                            <td>New York</td>
+                                            <td>30</td>
+                                            <td>2011/09/03</td>
+                                            <td>$345,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yuri Berry</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td>New York</td>
+                                            <td>40</td>
+                                            <td>2009/06/25</td>
+                                            <td>$675,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Caesar Vance</td>
+                                            <td>Pre-Sales Support</td>
+                                            <td>New York</td>
+                                            <td>21</td>
+                                            <td>2011/12/12</td>
+                                            <td>$106,450</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Doris Wilder</td>
+                                            <td>Sales Assistant</td>
+                                            <td>Sidney</td>
+                                            <td>23</td>
+                                            <td>2010/09/20</td>
+                                            <td>$85,600</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">guardar</button>
+                </form>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Your Website 2020</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="login_Registrador.html">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>
